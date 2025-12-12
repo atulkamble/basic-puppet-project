@@ -190,17 +190,3 @@ puppet resource package apache2
 ✔ Infrastructure as Code basics
 
 ---
-
-## 🚀 Next Level Enhancements (Optional)
-
-If you want, I can help you add:
-
-* Puppet **modules**
-* Nginx instead of Apache
-* User & group management
-* Cron jobs via Puppet
-* Puppet Master + Agent setup
-* GitHub-ready Puppet project
-* Terraform + EC2 + Puppet combo project
-
-👉 Just tell me how advanced you want it.
