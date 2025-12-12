@@ -161,7 +161,10 @@ file { '/var/www/html/index.html':
 ## ▶️ Step 6: Apply Puppet Manifest
 
 ```bash
-sudo puppet apply manifests/site.pp
+cd .. 
+
+cd /home/ubuntu/puppet-apache
+sudo /opt/puppetlabs/bin/puppet apply manifests/site.pp
 ```
 
 Expected output:
