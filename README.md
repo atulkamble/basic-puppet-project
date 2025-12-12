@@ -32,11 +32,14 @@ Use **Puppet** to:
 
 ## 🧰 Prerequisites
 
-* AWS EC2 (Ubuntu 20.04 / 22.04)
+* AWS EC2 Instance:
+  * Ubuntu Server 24.04 LTS
+  * Instance Type: t3.medium
+  * Key Pair: puppet.pem
 * Security Group:
-
   * SSH (22)
   * HTTP (80)
+  * Puppet (8140)
 * User: `ubuntu`
 
 ---
@@ -46,7 +49,7 @@ Use **Puppet** to:
 SSH into your instance:
 
 ```bash
-ssh -i key.pem ubuntu@<EC2-Public-IP>
+ssh -i puppet.pem ubuntu@<EC2-Public-IP>
 ```
 
 ---
@@ -54,7 +57,7 @@ ssh -i key.pem ubuntu@<EC2-Public-IP>
 ## 🔹 Step 2: Install Puppet on Ubuntu
 
 ```bash
-sudo apt update
+sudo apt update -y
 sudo apt install -y wget
 wget https://apt.puppet.com/puppet7-release-focal.deb
 sudo dpkg -i puppet7-release-focal.deb
@@ -69,10 +72,13 @@ echo 'export PATH=/opt/puppetlabs/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Verify:
+Verify installation and start Puppet service:
 
 ```bash
 puppet --version
+sudo systemctl start puppet
+sudo systemctl enable puppet
+sudo systemctl status puppet
 ```
 
 ---
@@ -82,6 +88,13 @@ puppet --version
 ```bash
 mkdir -p puppet-apache/{manifests,files}
 cd puppet-apache
+cd manifests
+```
+
+Create the main manifest file:
+
+```bash
+sudo nano site.pp
 ```
 
 ```bash
