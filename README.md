@@ -1,5 +1,4 @@
-Below is a **basic, beginner-friendly Puppet project** that you can run on an **Ubuntu EC2 instance**. This is perfect for demos, labs, or first-time Puppet practice (agent–masterless mode).
-I’ll keep it **simple, practical, and interview-ready**.
+**Basic Puppet project** that you can run on an **Ubuntu EC2 instance**.
 
 ---
 
@@ -197,12 +196,12 @@ puppet resource package apache2
 
 ---
 
-## 📌 What You Learned (Interview Talking Points)
+## 📌 Interview Talking Points
 
-✔ Puppet **declarative language**
-✔ Idempotency (run manifest multiple times safely)
-✔ Package, Service, File resources
-✔ Puppet **standalone mode on EC2**
-✔ Infrastructure as Code basics
+- Puppet **declarative language**
+- Idempotency (run manifest multiple times safely)
+- Package, Service, File resources
+- Puppet **standalone mode on EC2**
+- Infrastructure as Code basics
 
 ---
